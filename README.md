@@ -1,4 +1,5 @@
-# K Nearest Neighbors for Large Datasets - KD-Trees and LSH
+# K Nearest Neighbors for Large Datasets
+## KD-Trees and LSH
 ### Group Members
 * Lingxiu Ge ([@lilyxiuxiuxiu](https://github.com/Lilyxiuxiuxiu))
 * Alexander Oleinik ([@a1xndr](https://github.com/a1xndr))
