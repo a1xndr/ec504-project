@@ -147,5 +147,5 @@ if __name__ == '__main__':
 	s = time.time()
 	main()
 	e = time.time()
-	print('Total time: ', e-s) # time of knn search in kd tree
+	print('Total time: ', e-s) # time to run knn search in kd tree
 	print()
