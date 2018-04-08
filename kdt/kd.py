@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # References- 
 # https://en.wikipedia.org/wiki/K-d_tree
+# simple 2d nns implemented
 from collections import namedtuple
 from operator import itemgetter
 from pprint import pformat
@@ -36,79 +37,78 @@ def generate_points(n, min_val, max_val):
     p = []
     for i in range(n):
         p.append((random.randint(min_val,max_val),
-                  random.randint(min_val,max_val),
                   random.randint(min_val,max_val)))
     return p
-
-def distance(point1, point2):
-    x1, y1 = point1
-    x2, y2 = point2
-
-    dx = x1 - x2
-    dy = y1 - y2
-
-    return math.sqrt(dx * dx + dy * dy)
-
-def closer_distance(pivot, p1, p2):
-    if p1 is None:
-        return p2
-
-    if p2 is None:
-        return p1
-
-    d1 = distance(pivot, p1)
-    d2 = distance(pivot, p2)
-
-    if d1 < d2:
-        return p1
-    else:
-        return p2
-
-def nns(tree, point, height=0):
-
+ 
+def nns(tree, q_point, plane, distance, nearest=None, height=0):
+    """ Find the nearest neighbor for the query point"""
+ 
     global nearest_nn
-
+    global distance_nn
+ 
     if tree is None:
-        return None
-
-    cur_node = tree.loc         
-    left = tree.l_child    
-    right = tree.r_child
-
-    k = len(point)
-
+        return
+ 
+    k = len(q_point)
+ 
+    cur_node = tree.loc        
+    left_branch = tree.l_child 
+    right_branch = tree.r_child 
+ 
+    nearer_kd = further_kd = nearer_hr = further_hr = left_hr = right_hr  = None
+ 
+    # Select axis based on depth so that axis cycles through all valid values
     axis = height % k
+ 
+    if axis == 0:
+        left_hr = [plane[0], (cur_node[0], plane[1][1])]
+        right_hr = [(cur_node[0],plane[0][1]), plane[1]]
+ 
+    if axis == 1:
+        left_hr = [(plane[0][0], cur_node[1]), plane[1]]
+        right_hr = [plane[0], (plane[1][0], cur_node[1])]
+ 
+    if q_point[axis] <= cur_node[axis]:
+        nearer_kd = left_branch
+        further_kd = right_branch
+        nearer_hr = left_hr
+        further_hr = right_hr
+ 
+    if q_point[axis] > cur_node[axis]:
+        nearer_kd = right_branch
+        further_kd = left_branch
+        nearer_hr = right_hr
+        further_hr = left_hr
+ 
+    dist = (cur_node[0] - q_point[0])**2 + (cur_node[1] - q_point[1])**2
+ 
+    if dist < distance:
+        nearest = cur_node
+        distance = dist
+ 
+    # go deeper in the tree
+    nns(nearer_kd, q_point, nearer_hr, distance, nearest, height+1)
+ 
+    if distance < distance_nn:
+        nearest_nn = nearest
+        distance_nn = distance
+    px = closest(q_point[0], further_hr[0][0], further_hr[1][0])
+    py = closest(q_point[1], further_hr[1][1], further_hr[0][1])
+ 
+    dist = (px - q_point[0])**2 + (py - q_point[1])**2
+    if dist < distance_nn:
+        nns(further_kd, q_point, further_hr, distance, nearest, height+1)
 
-    next_branch = None
-    opposite_branch = None
-
-    if point[axis] < cur_node[axis]:
-        next_branch = left
-        opposite_branch = right
-    else:
-        next_branch = right
-        opposite_branch = left
-
-    nearest_nn = closer_distance(point,
-                           nns(next_branch,point,height+1),
-                           cur_node)
-
-    if distance(point, nearest_nn) > abs(point[axis] - cur_node[axis]):
-        nearest_nn = closer_distance(point,
-                               nns(opposite_branch,point,height+1),
-                               nearest_nn)
-    return nearest_nn
-
-def compute(value, range_min, range_max):
+def closest(v, _min, _max):
     """ Compute the closest coordinate for the neighboring plane"""
-    v = None
-    if range_min < value < range_max:
-        v = value
-    elif value <= range_min:
-        v = range_min
-    elif value >= range_max:
-        v = range_max
-    return v
+    x = None
+    if _min < v < _max:
+        x = v
+    elif v <= _min:
+        x = _min
+    elif v >= _max:
+        x = _max
+    return x
     
 def main():
 	n = 1000        # number of points
@@ -121,22 +121,20 @@ def main():
 	print(tree)
 	print()
 	# generate a random query point
-	# point = (np.random.normal(random.randint(min_val,max_val), scale=0.5), 
- #        np.random.normal(random.randint(min_val,max_val), scale=0.5),
- #        np.random.normal(random.randint(min_val,max_val), scale=0.5))
-	# print('Query Point: ', point)
-	# print()
-	# initial hyperplace creation
-	# hr = [(min_val, max_val), (max_val, min_val)]
-	# max_dist = float('inf')
+	point = (np.random.normal(random.randint(min_val,max_val), scale=0.5), 
+        np.random.normal(random.randint(min_val,max_val), scale=0.5))
+	print('Query Point: ', point)
+	print()
+	# initial hyperplane creation
+	plane = [(min_val, max_val), (max_val, min_val)]
+	max_dist = float('inf')
 	# find the nearest neighbor
-	# nns(tree, point)
-    # nns(tree, point)
-	# print('Nearest Point in tree: ', nearest_nn)
-	# print()
+	nns(tree, point, plane, max_dist)
+	print('Nearest Point in tree: ', nearest_nn)
+	print()
 
-# nearest_nn = None           # nearest neighbor (NN)
-# distance_nn = float('inf')  # distance from NN to target
+nearest_nn = None           # nearest neighbor (NN)
+distance_nn = float('inf')  # distance from NN to target
 
 if __name__ == '__main__':
 	s = time.time()
