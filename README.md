@@ -1,6 +1,7 @@
 <p align="center"> 
 <img src="https://i.imgur.com/Rpwtquk.png">
 </p>
+
 # K Nearest Neighbors for Large Datasets
 ## KD-Trees and LSH
 ### Group Members
