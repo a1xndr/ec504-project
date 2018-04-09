@@ -3,21 +3,15 @@
 import cv2, sys, time, os, collections, argparse, multiprocessing
 import numpy as np
 
-parser = argparse.ArgumentParser()
-parser.add_argument('--db', required = True)
+parser = argparse.ArgumentParser(description="Build locality sensitve hash database for 80M images")
+parser.add_argument('--db', required = True, help='Path to the tiny images binary')
 parser.add_argument('-v', action = 'store_true')
-parser.add_argument('filename', nargs = 1)
 rp = parser.parse_args()
 
 verbose = rp.v
 f = open(rp.db)
 d = 32
 
-i = np.uint8(np.reshape(cv2.imread(rp.filename[0]), (d, d, 3), order = 'F'))
-b = list(i[:, :, 0].flatten(order = 'F'))
-g = list(i[:, :, 1].flatten(order = 'F'))
-r = list(i[:, :, 2].flatten(order = 'F'))
-qi = np.int32(np.reshape(r + g + b, (1, d * d * 3), order = 'F'))
 
 start = time.time()
 
@@ -50,14 +44,18 @@ def compute_distance(datachunks):
 	return [np.linalg.norm(qi - np.fromstring(c, np.uint8)) for c in datachunks]
 
 def compute_hash(datachunks):
-        return [ ["".join(['1' if i > 0 else '0' for i in np.dot(p, np.fromstring(c, np.uint8)-np.full(d*d*3,128))]) for p in uniform_planes]  for c in datachunks]
+        result = []
+        for c in datachunks:
+            result.append(["".join(['1' if i > 0 else '0' for i in np.dot(p, np.fromstring(c, np.uint8)-np.full(d*d*3,128))]) for p in uniform_planes])
+            print(str(result[-1][0]) + "\t" + str(result[-1][1]) +"\t" +str(np.fromstring(c, np.uint8)[100]) + "\t" + str(np.fromstring(c, np.uint8)[101]))
+        return result
 
 def process(stream):
 	q = collections.deque()
 	pool = multiprocessing.Pool(processes = 4)
 	for i in stream:
 		if len(q) >= 20:
-			yield q.popleft().get()
+		    yield q.popleft().get()
 		q.append(pool.apply_async(compute_hash, (i,)))
 	for i in q:
 		yield i.get()
@@ -74,7 +72,7 @@ np.savez_compressed('file.npz', uniform_planes = uniform_planes)
 c = 0
 for j, result in enumerate(process(read_stream())):
 	for k in result:
-		print k[0], k[1], c
+		#print k[0], k[1], c
 		c += 1
 	if verbose:
 		status_msg(j, f.tell(), os.path.getsize(rp.db))

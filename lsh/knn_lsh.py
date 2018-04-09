@@ -3,7 +3,7 @@
 import cv2, sys, time, os, collections, argparse, multiprocessing
 import numpy as np
 
-parser = argparse.ArgumentParser()
+parser = argparse.ArgumentParser(description="Find nearest neighbors for image")
 parser.add_argument('--db', required = True)
 parser.add_argument('filename', nargs = 1)
 rp = parser.parse_args()
@@ -43,24 +43,22 @@ with open(fname) as f:
         line = line.split(" ")
         if line[0] == hash:
             hashmatch.append(line[-1][:-1])
-            print hashmatch[-1]
+            #print hashmatch[-1]
         line = f.readline()
 f.close()
 
 
 f = open(rp.db)
-dist = float('Inf')
+distances = [None]*len(hashmatch)
 closest = 0
-for match in hashmatch:
+for i, match in enumerate(hashmatch):
     f.seek((int(match)-1)*d*d*3)
     image = f.read(d * d * 3)
     image = np.fromstring(image, np.uint8)
-    print(image)
+    #print(image)
     image = np.reshape(image,(1,d*d*3), order='F')
-    if distance(image, qi) < dist:
-        dist = distance(image, qi)
-        closest = match
-        print closest
+    distances[i] = distance(image, qi)
 
-print closest
+for i in np.argsort(distances):
+    print(str(hashmatch[i]) +" : " + str(distances[i]))
 f.close()
