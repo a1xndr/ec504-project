@@ -1,3 +1,4 @@
+![KNN](https://raw.githubusercontent.com/a1xndr/ec504-project/master/website/images/logo.png)
 # K Nearest Neighbors for Large Datasets
 ## KD-Trees and LSH
 ### Group Members
