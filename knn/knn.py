@@ -2,49 +2,56 @@
 
 
 import math
+import csv
+import argparse
+from sys import argv
 
-def knn(trainX, inputimageX):
+
+
+
+parser = argparse.ArgumentParser(description="Find nearest neighbors for image")
+parser.add_argument('--k', required = True)
+parser.add_argument('--db', required = True)
+parser.add_argument('filename', nargs = 1)
+
+rp = parser.parse_args()
+
+
+
+def distance(trainX, inputimageX):
 	y = []
-	for j in range(len(tranX)):
-		eucl = 0
-		dist = []
-		for i in range(len(trainX[0])):
-			eucl = eucl + (trainX[i] - inputimageX[i])**2
-		dist.append([math.sqrt(eucl), j])
-	return dist
-
-def dataparse(filenameX, inputimageX):
-	trainX = []
-	with open(filenameX) as xtrain:
-		for line in xtrain:
-			newline = line.split()
-			num = ""
-			for i in newline:
-				num += i
-			trainX.append(num)
-	xtrain.close()
-
-	with open(inputimageX) as xtest:
-		testX = []
-		for line in xtest:
-			newline = line.split()
-			num = ""
-			for i in newline:
-				num += i
-			testX.append(num)
-	xtest.close()
-
-	return trainX, testX
+	if (len(trainX) != len(inputimageX)):
+		print ("images are not the same size!")
+		return None
+	eucl = 0
+	for i in range(len(trainX[0])):
+		eucl += (int(trainX[i],16) - int(inputimageX[i],16))**2
+	return euc1
 
 
 
-if __name__ == '__main__':
-	filenameX = "data_mnist_train.txt"
-	inputimageX = "data_mnist_test.txt"
+def knn(datafile, inputimageX, k):
+	distarray = []
 
-	trainX, testX = dataparse(filenameX, inputimageX)
+	data = open(datafile).readlines()
+	for index, line in enumerate(data.readlines()):
+		dist = distance(datafile, inputimageX)
+		distarray.append((dist, index))
+	sorted(distarray)
+	data.close()
+
+	return distarray[0:k-1]
 
 
 
+f = open(rp.db)
+nearestfiles = []
+inputfile = open(rp.filename[0])
+for line in inputfile:
+	distances = knn(rp.db, line, rp.k)
+	for x in distances:
+		nearestfiles.append(rp.db[x[1]])
+f.close()
+inputfile.close()
 
-
+print (i for i in nearestfiles)
