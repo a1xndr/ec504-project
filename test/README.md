@@ -11,3 +11,5 @@
    ### 3. Test LSH on MNIST 
       * Upload data_mnist_train.mat and data_mnist_test.mat in jupyter notebook.
       * Run lsh.ipython
+   ### 4. Generate CCR plots
+      * Run drawplot.m in matlab
