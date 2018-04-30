@@ -1,0 +1,339 @@
+Generate a uniform plane and get the hashes...
+0 [[ -3.54156542e-01  -1.76050922e+00  -8.95987427e-01 ...,  -9.92527073e-01
+   -2.63084136e-01  -2.90435282e-01]
+ [  2.44892448e-02  -7.07854258e-02  -6.43367045e-02 ...,   2.10209014e-01
+    2.00327379e+00  -9.06858307e-01]
+ [  8.25619188e-01  -1.02398985e-01  -7.41889977e-01 ...,  -1.43938419e+00
+   -6.57829442e-01   2.20858166e-01]
+ ..., 
+ [  6.27583866e-01  -8.92449430e-01   2.29151633e+00 ...,  -9.10739653e-02
+    3.35038698e-01  -7.49812443e-01]
+ [  4.90674564e-01  -9.41642374e-02  -2.26294297e-01 ...,   2.99451971e-05
+    2.51394149e-01   1.68447051e+00]
+ [  9.68339491e-03   7.31943873e-02   7.72183770e-01 ...,  -1.19669992e-01
+   -9.72228047e-01   5.81006519e-01]]
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+CCR with hash size = 11 is 0.9255
+Number of no prediction points: 28
+Running time: 89secs
+1 [[ 0.55337023 -1.73835498  1.43587782 ..., -0.62011851 -0.61093947
+  -0.21632696]
+ [-0.85863    -1.6277372  -1.30679217 ...,  0.00232659 -0.03236201
+   0.98829141]
+ [-0.20719287  0.17249233  0.86176602 ..., -1.03149387 -0.51391326
+   1.03462743]
+ ..., 
+ [ 0.83408825 -0.9350263  -0.57009721 ..., -0.05568533  0.50975516
+   0.40564753]
+ [ 1.14235814  0.8856078   0.28638412 ...,  0.68899747  1.36227674
+  -0.32821686]
+ [ 0.35572107 -1.29945001  1.64886137 ..., -0.05839071 -0.04249006
+  -0.07226167]]
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+CCR with hash size = 11 is 0.8999
+Number of no prediction points: 27
+Running time: 34secs
+2 [[ 1.25418687 -0.29316645 -0.1043581  ..., -1.14419702  0.31770838
+   0.54799019]
+ [ 2.88721041  0.35990205 -0.5033824  ..., -0.21919152  0.16419914
+   0.98346896]
+ [ 0.08942546 -1.26631114  1.26567083 ..., -1.07970972 -1.35298792
+   1.2062655 ]
+ ..., 
+ [ 0.54043102  0.95314722 -0.87908081 ...,  1.27460952 -2.08364493
+  -0.24920156]
+ [ 0.57963653  0.70389919  0.12751795 ...,  1.69966214  0.39365976
+  -0.43229927]
+ [ 0.11677869 -1.32460904 -0.70158612 ...,  1.89380124  0.07602711
+  -1.0153079 ]]
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+CCR with hash size = 11 is 0.941
+Number of no prediction points: 6
+Running time: 155secs
+3 [[ 0.02129787  0.1131588   0.44797783 ..., -0.05219794 -0.81388721
+   1.03726478]
+ [ 1.30586361  0.26400043 -0.45463102 ..., -0.02918003 -1.29281863
+  -0.08216852]
+ [-1.01421035  0.01897093 -0.97905747 ...,  1.50931373 -0.1067355
+  -0.49885596]
+ ..., 
+ [-2.1492514   0.95476066  0.86779225 ...,  0.33298386 -0.33530836
+   0.01947712]
+ [ 1.57190071 -1.58276104 -0.59511668 ...,  1.44286841 -1.58982047
+  -0.20986201]
+ [ 0.18720652 -0.59778     0.08646402 ..., -0.19070634  0.78466837
+   0.40205971]]
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+CCR with hash size = 11 is 0.9238
+Number of no prediction points: 13
+Running time: 92secs
+4 [[ 0.75469207 -2.03690241 -1.17038289 ..., -2.73223298 -0.56831795
+  -0.96590454]
+ [ 0.16362288 -0.60549763  0.47430052 ..., -0.47279265  0.8373614
+   0.08735807]
+ [ 1.10248033  2.15518093  0.82864313 ..., -0.49403498 -1.70415973
+   0.01713659]
+ ..., 
+ [ 0.91277479 -0.77134971  0.14801198 ..., -0.20224752  0.80509565
+   1.370108  ]
+ [ 1.50737867 -1.11003713  0.89498509 ...,  0.06352387 -1.60658853
+  -1.53140626]
+ [-0.27308197 -0.04737495 -0.77921332 ..., -0.60722761  1.11954548
+  -0.33230343]]
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+CCR with hash size = 11 is 0.9538
+Number of no prediction points: 5
+Running time: 907secs
+5 [[  9.52800256e-01   1.78052526e+00   3.88077946e-01 ...,  -9.54331976e-01
+    1.33856942e+00   6.52767472e-01]
+ [  7.91273433e-02   2.13617814e-01  -1.11031337e+00 ...,  -7.47165572e-01
+    1.90660204e-03  -1.83488706e+00]
+ [  2.00128037e-01   8.56181703e-01   3.51837251e-01 ...,  -5.75380568e-02
+    1.23151609e+00  -1.64093994e+00]
+ ..., 
+ [ -9.55684347e-02  -4.51398854e-01   1.08082830e+00 ...,  -1.72139401e-01
+   -1.07664772e+00  -1.15115969e+00]
+ [  5.53378695e-01  -4.96941684e-01  -1.24034562e-01 ...,   1.96691704e+00
+   -4.03386855e-01   2.88692192e-03]
+ [  4.14617705e-01   2.69806965e-02  -1.08309586e+00 ...,   2.95784191e-02
+    1.27826562e+00   1.23738502e+00]]
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+CCR with hash size = 11 is 0.8899
+Number of no prediction points: 25
+Running time: 31secs
+6 [[ 0.23850468  0.68045222  1.69918232 ...,  0.75571756 -0.49385536
+   0.09465916]
+ [ 0.56758556  0.65492991  0.09244086 ...,  0.58904034  1.11096473
+   1.00205569]
+ [-0.86318532 -0.57012273 -2.11082892 ..., -0.33596803 -0.76192848
+   1.1194772 ]
+ ..., 
+ [-0.75391249  0.63790073  0.13767818 ..., -0.24101066  0.21029779
+   0.13245342]
+ [-0.36913164 -0.26878453 -0.01369352 ..., -0.38422807  0.12554408
+   1.96950732]
+ [-1.49365606  1.63039609  0.29230823 ...,  0.6432929   1.30988266
+   1.65149803]]
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+CCR with hash size = 11 is 0.9328
+Number of no prediction points: 11
+Running time: 87secs
+7 [[ 0.9739305   0.27697985  0.0693805  ...,  0.24170323 -1.55721731
+  -0.17264596]
+ [ 0.12572151  0.74526736 -1.69919672 ..., -1.7970468  -0.7564963
+   0.3150721 ]
+ [ 0.09375045  0.85381971  0.29731717 ..., -0.1991011   0.37671922
+  -0.04070788]
+ ..., 
+ [-0.8223106   0.62907688 -0.89018896 ..., -0.04826805  0.70905838
+   0.36432002]
+ [ 0.05721117 -0.03945551 -0.34449655 ..., -0.63956044 -0.09330398
+  -0.57334835]
+ [-1.74835096 -2.71879231 -1.37494231 ...,  0.66536607 -0.24300893
+   1.44166514]]
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+CCR with hash size = 11 is 0.9292
+Number of no prediction points: 18
+Running time: 111secs
+8 [[ 1.40007505  1.48422216 -0.03502928 ...,  0.72241318 -1.80121549
+  -0.63541837]
+ [-1.16446795 -0.88504722  0.56076016 ...,  1.25401924 -0.41194441
+  -0.20915111]
+ [ 0.5897908  -0.23165177  1.43057734 ..., -0.98944518  0.75278312
+  -0.34953186]
+ ..., 
+ [-0.49379386 -0.5440708  -1.49675116 ..., -0.03154542 -0.20095736
+  -1.25478455]
+ [ 0.07211713 -1.14131242 -0.77195755 ...,  2.20142601  1.28976718
+   1.54183587]
+ [-1.19878058  1.34165088 -1.04999908 ...,  0.54248822  0.24414406
+   0.15839515]]
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+CCR with hash size = 11 is 0.9286
+Number of no prediction points: 16
+Running time: 119secs
+9 [[-0.78875205 -0.68080697  0.59711154 ..., -0.16178593  1.08790183
+   0.22744427]
+ [-0.45580264 -0.93802077  0.62650856 ...,  1.03542197  0.26814082
+  -1.29367284]
+ [ 1.4559326  -0.5944199  -1.7682264  ..., -0.83305539 -0.77753128
+   0.26002901]
+ ..., 
+ [-2.32185521 -1.95359648  0.94704661 ..., -1.6274436  -0.06547085
+   0.07945234]
+ [ 0.17700375 -0.82002034 -0.20377573 ..., -1.24164679 -0.70913282
+   0.16678954]
+ [ 0.07410374 -2.58116942 -0.87225745 ...,  0.24070823  0.21534768
+  -0.01413252]]
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+No point in this hash.
+CCR with hash size = 11 is 0.9346
+Number of no prediction points: 19
+Running time: 224secs
+Total CCR with hash size = 11 is 0.9505 10
+Total CCR with hash size = 11 is 0.9518 9
+Total CCR with hash size = 11 is 0.9533 8
+Total CCR with hash size = 11 is 0.9529 7
+Total CCR with hash size = 11 is 0.9536 6
+Total CCR with hash size = 11 is 0.9564 5
+Total CCR with hash size = 11 is 0.9528 4
+Total CCR with hash size = 11 is 0.9502 3
+Total CCR with hash size = 11 is 0.9288 2
+Total CCR with hash size = 11 is 0.9255 1
