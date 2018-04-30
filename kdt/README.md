@@ -42,7 +42,11 @@ Download Link: https://www.cs.toronto.edu/~kriz/cifar.html
 
 ```
 
-
+## References
+ * https://en.wikipedia.org/wiki/K-d_tree
+ * http://www.cs.nthu.edu.tw/~shwu/courses/ml/labs/11_NN_Regularization/11_NN_Regularization.html
+ * https://github.com/dhingratul/k-Nearest-Neighbors/blob/master/kNN.py
+ * https://github.com/hudara/cifar-10
 
 
 
