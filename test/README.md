@@ -15,7 +15,6 @@
       * Run drawplot.m in matlab
 ## Results
    ### 1.
-   <img src="https://github.com/a1xndr/ec504-project/blob/master/test/result/1.jpg">
    ![alt text](https://github.com/a1xndr/ec504-project/blob/master/test/result/1.jpg)
    ### 2.
    ![alt text](https://github.com/a1xndr/ec504-project/blob/master/test/result/2.jpg)
