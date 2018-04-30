@@ -5,4 +5,9 @@
       * Put the getMNIST.py and getLabels.py and the -ubyte file which you want to parse in the same folder
       * Change the filename variable in this two python program.
       * Run them.
-   ### 2.
+   ### 2. Test KD-Tree on MNIST
+      * Upload data_mnist_train.mat and data_mnist_test.mat in jupyter notebook.
+      * Run kdt.ipython
+   ### 3. Test LSH on MNIST 
+      * Upload data_mnist_train.mat and data_mnist_test.mat in jupyter notebook.
+      * Run lsh.ipython
