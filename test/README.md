@@ -15,4 +15,4 @@
       * Run drawplot.m in matlab
 ## Results
    ### 1.
-   <img align="center" width="250" src=https://github.com/a1xndr/ec504-project/tree/master/test/result/1.jpg>
+   <img align="center" width="250" src=/result/1.jpg>
