@@ -26,6 +26,27 @@ def DisplayTree(root): # Preorder Display
     if root.right:
         DisplayTree(root.right)
 
+
+def NNS(dist_array=None, tmp_dist=0.0, point=None, k=1, NN=None,):
+    """Nearest Neighbor Search Algorithm"""
+    if tmp_dist <= np.min(dist_array) : 
+            for i in range(k-1,0,-1) :
+                dist_array[i] = dist_array[i-1]
+                NN[i] = NN[i-1]    
+            dist_array[0] = tmp_dist
+            NN[0] = point                
+            return NN, dist_array
+    for i in range(k): # Find more nn point in the other hyperplanes
+        if (dist_array[i] <= tmp_dist) and (dist_array[i+1] >= tmp_dist):
+            for j in range(k-1,i,-1) : 
+                dist_array[j] = dist_array[j-1]
+                NN[j] = NN[j-1]
+            dist_array[i+1] = tmp_dist
+            NN[i+1] = point
+            break
+    return NN, dist_array
+
+
 class Node(object):
     """Construct Node"""
     def __init__(self, point=None, plane=None, left=None, right=None):
@@ -63,27 +84,6 @@ class KDTree(object):
         self.root = createNode(_max(data), data)
 
 
-# In[2]:
-
-
-def NNS(dist_array=None, tmp_dist=0.0, point=None, k=1, NN=None,):
-    """Nearest Neighbor Search Algorithm"""
-    if tmp_dist <= np.min(dist_array) : 
-            for i in range(k-1,0,-1) :
-                dist_array[i] = dist_array[i-1]
-                NN[i] = NN[i-1]    
-            dist_array[0] = tmp_dist
-            NN[0] = point                
-            return NN, dist_array
-    for i in range(k): # Find more nn point in the other hyperplanes
-        if (dist_array[i] <= tmp_dist) and (dist_array[i+1] >= tmp_dist):
-            for j in range(k-1,i,-1) : 
-                dist_array[j] = dist_array[j-1]
-                NN[j] = NN[j-1]
-            dist_array[i+1] = tmp_dist
-            NN[i+1] = point
-            break
-    return NN, dist_array
 
 
 # In[3]:
