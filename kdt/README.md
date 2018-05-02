@@ -42,9 +42,6 @@ Download Link: https://www.cs.toronto.edu/~kriz/cifar.html
 
 ```
 
-![Image Preprocess Flow Chart](/Users/czheng/Desktop/flowchart)
-Format: ![Alt Text](url)
-
 
 
 ## References
