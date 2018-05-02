@@ -20,3 +20,7 @@
    ![alt text](https://github.com/a1xndr/ec504-project/blob/master/test/result/2.jpg)
    ### 3.
    ![alt text](https://github.com/a1xndr/ec504-project/blob/master/test/result/3.jpg)
+   ### 4.
+   ![alt text](https://github.com/a1xndr/ec504-project/blob/master/test/result/4.jpg)
+   ### 5.
+   ![alt text](https://github.com/a1xndr/ec504-project/blob/master/test/result/5.jpg)
