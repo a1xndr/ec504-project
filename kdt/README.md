@@ -42,6 +42,11 @@ Download Link: https://www.cs.toronto.edu/~kriz/cifar.html
 
 ```
 
+![Image Preprocess Flow Chart](/Users/czheng/Desktop/flowchart)
+Format: ![Alt Text](url)
+
+
+
 ## References
  * https://en.wikipedia.org/wiki/K-d_tree
  * http://www.cs.nthu.edu.tw/~shwu/courses/ml/labs/11_NN_Regularization/11_NN_Regularization.html
