@@ -42,7 +42,11 @@ Download Link: https://www.cs.toronto.edu/~kriz/cifar.html
 
 ```
 
-
+## Results
+   ### 1.
+   ![alt text](https://github.com/a1xndr/ec504-project/blob/master/kdt/flowchart.png)
+   ### 2.
+   ![alt text](https://github.com/a1xndr/ec504-project/blob/master/kdt/Result.png)
 
 ## References
  * https://en.wikipedia.org/wiki/K-d_tree
