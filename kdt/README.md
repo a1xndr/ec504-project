@@ -19,7 +19,7 @@ from Cifar-10 testImage batch file.
 ```
 usage: KDT.py k queryImagefile
 
-For example, in terminal just run "python3 KDT.py 10 plane.jpg".
+For example, in terminal just run "python KDT.py 10 ship.jpg".
 
 Find k nearest neighbors for queryImagefile.
 ```
