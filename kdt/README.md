@@ -23,7 +23,7 @@ For example, in terminal just run "python KDT.py 10 ship.jpg".
 
 Find k nearest neighbors for queryImagefile.
 ```
-
+![alt text](https://github.com/a1xndr/ec504-project/blob/master/kdt/flowchart.png)
  * pca
 ```
 An output file of all the PCA arrays for the images that implemented into KD Tree.
@@ -42,9 +42,10 @@ Download Link: https://www.cs.toronto.edu/~kriz/cifar.html
 
 ```
 
+## Results
+![alt text](https://github.com/a1xndr/ec504-project/blob/master/kdt/Result.png)
 
-
-## References
+## Sources
  * https://en.wikipedia.org/wiki/K-d_tree
  * http://www.cs.nthu.edu.tw/~shwu/courses/ml/labs/11_NN_Regularization/11_NN_Regularization.html
  * https://github.com/dhingratul/k-Nearest-Neighbors/blob/master/kNN.py
