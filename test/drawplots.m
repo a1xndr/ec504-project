@@ -33,3 +33,10 @@ plot(hash_size,time)
 xlabel('Hash Size')
 ylabel('Running time (s)')
 title('The Total Query Time with Different Hash Size')
+
+kdtccr = [0.9564,0.9513,0.9621,0.9613,0.9639,0.9630,0.9647,0.9642,0.9647,0.9640];
+figure
+plot(1:10,kdtccr)
+xlabel('Number of Dimension(K)')
+ylabel('CCR')
+title('The KD-Tree CCR with Different Choice of K')
